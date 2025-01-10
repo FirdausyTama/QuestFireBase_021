@@ -82,7 +82,7 @@ fun HomeScreen(
             modifier = Modifier.padding(innerPadding),
             onDetailClick = onDetailClick,
             onDeleteClick = {
-                viewModel.deleteMhs(it)
+                viewModel.deleteMhs(it) //ini tadinya viewmodel.getMhs()
             }
         )
     }
