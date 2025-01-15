@@ -36,9 +36,9 @@ class NetworkRepositoryMhs(
         }
     }
 
-    override fun getMhs(nim: String): Flow<Mahasiswa> = callbackFlow{
+    override fun getMhs(docId: String): Flow<Mahasiswa> = callbackFlow{
         val mhsDocument = firestore.collection("Mahasiswa")
-            .document(nim)
+            .document(docId)
             .addSnapshotListener{ value, error ->
                 if (value != null) {
                     val mhs = value.toObject(Mahasiswa::class.java)!!
