@@ -11,7 +11,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -135,23 +137,7 @@ fun InsertBodyMhs(
             errorState = uiState.isEntryValid,
             modifier = Modifier.fillMaxWidth()
         )
-        Button(
-            onClick = onClick,
-            modifier = Modifier.fillMaxWidth(),
-            enabled = homeUiState !is FormState.Loading,
-        ) {
-            if (homeUiState is FormState.Loading) {
-                CircularProgressIndicator(
-                    color = Color.White,
-                    modifier = Modifier
-                        .size(20.dp)
-                        .padding(end =8.dp)
-                )
-                Text("Loading...")
-            } else {
-                Text("Add")
-            }
-        }
+
     }
 }
 
@@ -166,7 +152,7 @@ fun FormMahasiswa(
     val kelas = listOf("A", "B", "C", "D", "E")
 
     Column (
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState())
     ){
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
@@ -325,5 +311,6 @@ fun FormMahasiswa(
             text = errorState.dospem2 ?: "",
             color = Color.Red
         )
+
     }
 }
