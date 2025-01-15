@@ -280,5 +280,50 @@ fun FormMahasiswa(
             text = errorState.angkatan ?: "",
             color = Color.Red
         )
+
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.skripsi,
+            onValueChange = {
+                onValueChange(mahasiswaEvent.copy(skripsi = it))
+            },
+            label = { Text("Judul Skripsi")},
+            isError = errorState.skripsi != null,
+            placeholder = { Text("Masukan Judul Skripsi")},
+        )
+        Text(
+            text = errorState.skripsi ?: "",
+            color = Color.Red
+        )
+
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dospem1,
+            onValueChange = {
+                onValueChange(mahasiswaEvent.copy(dospem1 = it))
+            },
+            label = { Text("Dospem 1")},
+            isError = errorState.dospem1 != null,
+            placeholder = { Text("Masukan Nama Pembimbing 1")},
+        )
+        Text(
+            text = errorState.dospem1 ?: "",
+            color = Color.Red
+        )
+
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dospem2,
+            onValueChange = {
+                onValueChange(mahasiswaEvent.copy(dospem2 = it))
+            },
+            label = { Text("Dospem 2")},
+            isError = errorState.dospem2 != null,
+            placeholder = { Text("Masukan Nama Pembimbing 2")},
+        )
+        Text(
+            text = errorState.dospem2 ?: "",
+            color = Color.Red
+        )
     }
 }
