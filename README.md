@@ -1,6 +1,18 @@
-HOME TANPA DATA
-![image](https://github.com/user-attachments/assets/f5a20cd8-737a-451b-80ca-29a6558b9b24)
-INPUT DATA DAN VALIDASI
+HOME UCP
+![image](https://github.com/user-attachments/assets/03c65acd-fdfd-449f-b8bd-22702ce57ad6)
+
+INPUT DATA UCP
+![image](https://github.com/user-attachments/assets/956e61f4-c30f-4c0e-b505-172bf0a95047)
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
 ![image](https://github.com/user-attachments/assets/b875a520-61d7-41d9-98c9-340618afd2a5)
 ![image](https://github.com/user-attachments/assets/a4549cf4-af73-4a0c-8d68-b3a0e29bb586)
 HASIL INPUT DI HOME
