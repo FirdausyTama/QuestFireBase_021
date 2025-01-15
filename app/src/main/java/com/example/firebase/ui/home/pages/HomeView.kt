@@ -170,7 +170,7 @@ fun MhsLayout(
                     mahasiswa = mhs,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .clickable {  },
+                        .clickable { onDetailClick(mhs.nim) },
                     onDeleteClick = {
                         onDeleteClick(mhs)
                     }
