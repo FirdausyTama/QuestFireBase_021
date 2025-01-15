@@ -137,7 +137,23 @@ fun InsertBodyMhs(
             errorState = uiState.isEntryValid,
             modifier = Modifier.fillMaxWidth()
         )
-
+        Button(
+            onClick = onClick,
+            modifier = Modifier.fillMaxWidth(),
+            enabled = homeUiState !is FormState.Loading,
+        ) {
+            if (homeUiState is FormState.Loading) {
+                CircularProgressIndicator(
+                    color = Color.White,
+                    modifier = Modifier
+                        .size(20.dp)
+                        .padding(end =8.dp)
+                )
+                Text("Loading...")
+            } else {
+                Text("Add")
+            }
+        }
     }
 }
 
@@ -311,6 +327,5 @@ fun FormMahasiswa(
             text = errorState.dospem2 ?: "",
             color = Color.Red
         )
-
     }
 }
